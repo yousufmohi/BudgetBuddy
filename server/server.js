@@ -3,9 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
-
 const authRoutes = require("./routes/auth");
-
+const transactionRoutes = require("./routes/transactions");
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -16,6 +15,7 @@ mongoose.connect(process.env.DB_URI)
   .then(() => {
 
     app.use("/api/auth", authRoutes);
+    app.use("/api/transactions", transactionRoutes);
 
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
