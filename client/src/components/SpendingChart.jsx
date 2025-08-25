@@ -1,4 +1,5 @@
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import '../App.css'
 
 export default function SpendingChart({ transactions }) {
   const data = transactions.reduce((acc, t) => {

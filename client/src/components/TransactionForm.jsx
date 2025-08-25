@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { addTransaction } from "../lib/api";
+import '../App.css'
 
 export default function TransactionForm({ onAdd }) {
   const [form, setForm] = useState({

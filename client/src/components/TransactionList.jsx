@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTransactions, deleteTransaction } from "../lib/api";
+import '../App.css'
 
 export default function TransactionsList() {
   const [transactions, setTransactions] = useState([]);
